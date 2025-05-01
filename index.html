@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Gallery</title>
+    <style>
+        body {
+            font-family: 'Garamond', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #d4af37;
+            letter-spacing: 0.2em;
+            background-image: url("https://raw.githubusercontent.com/c-wallbridge/websiteimage/refs/heads/main/IMG_20250303_124024%20crop.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid #d4af37;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            max-width: 800px;
+            margin: 50px auto;
+        }
+        h1 {
+            margin: 0;
+            font-size: 3.63em;
+            font-weight: 400;
+            line-height: 1.2;
+            color: #d4af37;
+        }
+        .contact {
+            font-size: 1.1em;
+            color: #d4af37;
+            line-height: 1.5;
+        }
+        .contact p {
+            margin: 10px 0;
+        }
+        .artist-statement {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .artist-statement.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .artist-statement h2 {
+            color: #d4af37;
+        }
+        .artist-statement p {
+            text-align: left;
+            font-size: 1em;
+            line-height: 1.6;
+            color: #d4af37;
+            margin: 15px 0;
+        }
+        .slideshow {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 2px solid #d4af37;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .slide {
+            display: none;
+            width: 100%;
+            height: 400px;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .active {
+            display: block;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 16px;
+            color: #d4af37;
+            font-weight: bold;
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 50%;
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 3em;
+            }
+            .contact {
+                font-size: 1em;
+            }
+            .artist-statement p {
+                font-size: 0.9em;
+            }
+            .slide {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cass Wallbridge</h1>
+        <div class="contact">
+            <p>GLASS ARTIST</p>
+            <p>Email: <a href="mailto:casswallbridge@gmail.com" style="color: #d4af37; text-decoration: none;">casswallbridge@gmail.com</a></p>
+            <p>Phone: <a href="tel:+447919870084" style="color: #d4af37; text-decoration: none;">+44 7919 870 084</a></p>
+        </div>
+    </div>
+    <div class="container artist-statement" id="artist-statement">
+        <h2>Artist Statement</h2>
+        <p>
+            With a background in stained glass conservation, my practice is rooted in a deep respect for the historic craft of stained glass and a desire to carry its most beautiful qualities into new contexts. I work primarily with coloured glass—particularly traditional pot metal glass, whose movement and depth are intrinsic to its character. Viewed in transmitted light, these materials come alive, revealing a richness and vitality that is unmatched by any other medium.
+        </p>
+        <p>
+            At a time when contemporary architectural glass often relies on flat, industrially-produced surfaces with colour applied superficially, I am committed to preserving and evolving the material intelligence of stained glass. My work seeks to break away from the conventional leaded light format while remaining true to the enchanting, light-responsive essence of the medium. I aim to reconnect viewers with the natural world through glass—evoking the shifting qualities of landscape, light, and growth.
+        </p>
+        <p>
+            Rather than replicating the past, I see my practice as a continuation of a living tradition: one that honours the movement, irregularity, and luminosity of historic stained glass while adapting it for new forms, spaces, and ways of seeing. Through both sculptural and site-sensitive works, I hope to reawaken the poetic and sensory power of glass as a way of engaging with the more-than-human world.
+        </p>
+    </div>
+    <section id="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="slideshow">
+                <div class="slide active">
+                    <img src="https://raw.githubusercontent.com/c-wallbridge/websiteimage/main/IMG_20250225_155358%20crop.jpg" alt="Glass artwork with intricate patterns">
+                </div>
+                <div class="slide">
+                    <img src="https://raw.githubusercontent.com/c-wallbridge/websiteimage/main/IMG_20250125_161601%20crop.jpg" alt="Modern stained glass art">
+                </div>
+                <div class="slide">
+                    <img src="https://raw.githubusercontent.com/c-wallbridge/websiteimage/main/IMG_20250220_093927.jpg" alt="Colorful glass display">
+                </div>
+                <div class="slide">
+                    <img src="https://raw.githubusercontent.com/c-wallbridge/websiteimage/refs/heads/main/IMG_20250125_161553%20crop.jpg" alt="Unique geometric glass design">
+                </div>
+                <div class="slide">
+                    <img src="https://raw.githubusercontent.com/c-wallbridge/websiteimage/refs/heads/main/IMG_20250221_152613%20crop.jpg" alt="Artistic glass panel">
+                </div>
+                <div class="slide">
+                    <img src="https://raw.githubusercontent.com/c-wallbridge/websiteimage/refs/heads/main/IMG_20250217_144659.jpg" alt="Natural-inspired glass artwork">
+                </div>
+                <div class="slide">
+                    <img src="https://raw.githubusercontent.com/c-wallbridge/websiteimage/refs/heads/main/IMG_20250118_115326%20crop.jpg" alt="Classic stained glass art">
+                </div>
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+        </div>
+    </section>
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll(".slide");
+
+        function initializeSlides() {
+            slides[slideIndex].classList.add("active");
+        }
+
+        function changeSlide(n) {
+            slides[slideIndex].classList.remove("active");
+            slideIndex = (slideIndex + n + slides.length) % slides.length;
+            slides[slideIndex].classList.add("active");
+        }
+
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const artistStatement = document.getElementById("artist-statement");
+            const rect = artistStatement.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100 && rect.bottom > 0) {
+                artistStatement.classList.add("visible");
+            }
+        });
+
+        initializeSlides();
+    </script>
+</body>
+</html>
